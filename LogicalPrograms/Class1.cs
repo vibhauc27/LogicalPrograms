@@ -8,26 +8,33 @@ namespace LogicalPrograms
 {
     internal class Class1
     {
-        public void Fibonacci()
+        public void PerfectNumber()
         {
-            int num1 = 0, num2 = 1, num3;
-            
-            Console.WriteLine("Enter the number of Elements: ");
+            int sum = 0;
+            Console.WriteLine("Enter the number: ");
             int number = Convert.ToInt32(Console.ReadLine());
-            
-            Console.WriteLine(num1 + " "); // prints value of 1st and 2nd 
-            Console.WriteLine(num2 + " ");
 
-            for (int i = 0; i < number; i++) 
+
+            for (int i = 1; i < number; i++)
             {
-                num3 = num1 + num2;
-                Console.WriteLine(num3 + " ");
-                num1 = num2;
-                num2 = num3;
+                if (number % i == 0)
+                {
+                    sum = sum + i;
+                }
+            }
+            if (sum == number)
+            {
+                Console.WriteLine(" Entered the number is a perfect number");
+
+            }
+            else
+            {
+                Console.WriteLine("Entered the number is not a perfect number");
 
             }
         }
     }
 }
+
     
 
