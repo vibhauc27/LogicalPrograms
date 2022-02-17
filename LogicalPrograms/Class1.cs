@@ -8,30 +8,28 @@ namespace LogicalPrograms
 {
     internal class Class1
     {
-        public void PerfectNumber()
+        public void PrimeNumber()
         {
-            int sum = 0;
+            int i, m, value = 0;
+
             Console.WriteLine("Enter the number: ");
             int number = Convert.ToInt32(Console.ReadLine());
 
-
-            for (int i = 1; i < number; i++)
+            m = number / 2;
+            for (i = 2; i <= m; i++)
             {
                 if (number % i == 0)
                 {
-                    sum = sum + i;
+                    Console.WriteLine("It is not a prime number");
+                    value = 1;
+                    //break;
                 }
             }
-            if (sum == number)
+            if (value == 0)
             {
-                Console.WriteLine(" Entered the number is a perfect number");
-
+                Console.WriteLine("It is a prime number");
             }
-            else
-            {
-                Console.WriteLine("Entered the number is not a perfect number");
 
-            }
         }
     }
 }
