@@ -8,28 +8,20 @@ namespace LogicalPrograms
 {
     internal class Class1
     {
-        public void PrimeNumber()
+        public void Reverse()
         {
-            int i, m, value = 0;
+            int number, reminder,reverse=0;
+            Console.WriteLine("Enter the numbers to reverse");
+            number = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-
-            m = number / 2;
-            for (i = 2; i <= m; i++)
+            while (number > 0)
             {
-                if (number % i == 0)
-                {
-                    Console.WriteLine("It is not a prime number");
-                    value = 1;
-                    //break;
-                }
-            }
-            if (value == 0)
-            {
-                Console.WriteLine("It is a prime number");
-            }
+                reminder = number % 10;
+                reverse = (reverse * 10) + reminder;
+                number = number / 10;
 
+            }
+            Console.WriteLine("The reversed numbers are :" + reverse);
         }
     }
 }
