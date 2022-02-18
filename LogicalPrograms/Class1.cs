@@ -18,7 +18,7 @@ namespace LogicalPrograms
             Console.WriteLine(num1 + " "); // prints value of 1st and 2nd 
             Console.WriteLine(num2 + " ");
 
-            for (int i = 0; i < number; i++) 
+            for (int i = 2; i < number; i++) 
             {
                 num3 = num1 + num2;
                 Console.WriteLine(num3 + " ");
